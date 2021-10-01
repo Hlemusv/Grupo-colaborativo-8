@@ -1,88 +1,62 @@
 <!DOCTYPE html>
-<html lang="en"/>
+<html lang="en">
 <head>
-    <meta charset="UTF-8"> 
-    <link href="estilos.css" type="text/css" rel="stylesheet" />
-    <title> REGISTRO DE SOLICITUDES</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
 </head>
 <body>
-
-    <form action="" method="get" enctype="multipart/form-data" >
-        <table border="1" cellpading="3" cellspacing="4">
-            <tr>
-                <td colspan="2" align="center">REGISTRO DE TRABAJADORES</td> 
-            </tr>
-            <tr>
-                <td>RUT</td>
-                <td> <input type="text" name="rut" required />  </td>
-            </tr>
-            <tr>
-                <td>NOMBRE</td>
-                <td> <input type="text" name="nombre" required />  </td>
-            </tr>
-            <tr>
-                <td>APELLIDO PATERNO</td>
-                <td> <input type="text" name="apellido_paterno" required/>  </td>
-            </tr>
-            <tr>
-                <td>APELLIDO MATERNO</td>
-                <td> <input type="text" name="apellido_materno" required/>  </td>
-            </tr>
-            <tr>
-                <td>Fecha de nacimiento</td>
-                <td> <input type="date" name="fecha_nac" required/></td>
-            </tr>
-            <tr>
-                <td>Sexo</td>
-                <td> 
-                    <input type="radio" name="sexo" checked value="masculino" /> Masculino <br>
-                    <input type="radio" name="sexo" value="femenino"  /> Femenino
-                </td>
-            </tr>
-            <tr>
-                <td>Nivel de estudio</td>
-                <td>                    
-                    <input type="checkbox" name="estudios" value="tecnico"/> Técnico <br>
-                    <input type="checkbox" name="estudios" value="universitario"/> Universitario<br>
-                    <input type="checkbox" name="estudios" value="especializacion"/> Especialización
-                </td>
-            </tr>
-            
-            <tr>
-                <td>Ciudad</td>
-                <td>
-                    <select name="ciudad">
-                        <option value="cali"> Cali </option>
-                        <option value="medellin">Medellin</option>
-                        <option value="bucaramanga">Bucaramanga</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Hoja de vida</td>
-                <td> <input type="file" name="hoja_vida"  required/></td>
-            </tr>
-            <tr>
-                <td>Foto</td>
-                <td> <input type="file" name="foto" required/></td>
-            </tr>
-
-            <tr>
-                <td>Su Perfil</td>
-                <td>
-                    <textarea required maxlength="10" minlength="5" name="perfil" cols="40" rows="5"></textarea>
-                </td>
-            </tr>
-
-            <tr>
-                <td colspan="2"> 
-                    <input type="submit" name="aceptar" value="Registrar!"/> 
-                    <input type="hidden" name="identificacion" value="1234"/>
-                </td>
-            </tr>
-        </table>
-
-    </form>
     
+    <div id="formRegistro">
+        <form action="" class="formulario">
+            <div class="field_label">
+                <label for="campoNombre" class="etiqueta">Nombre</label>
+            </div>
+            <div class="field_input">
+                <input type="text" name="Nombre" id="campoNombre" placeholder="Escribe tu nombre.." >
+            </div>
+            <div class="field_label">
+                <label for="campoCorreo" class="etiqueta">Correo</label>
+            </div>
+            <div class="field_input">
+                <input type="text" name="Correo" id="campoCorreo" placeholder="E-mail...">
+            </div>
+            <div class="field_label">
+                <label for="campoContraseña" class="etiqueta">Contraseña</label>
+            </div>
+            <div class="field_input">
+                <input type="password" name="Contraseña" id="campoContraseña" placeholder="Contraseña...">
+            </div>
+            <div class="field_label">
+                <label for="campoConfirmar" class="etiqueta">Confirmar Contraseña</label>
+            </div>
+            <div class="field_input">
+                <input type="password" name="Confirmar Contraseña" id="campoConfirmar" placeholder="Confirma Contraseña...">
+            </div>
+            <div class="field_label">
+                <label for="campoCelular" class="etiqueta">Celular</label>
+            </div>
+            <div class="field_input">
+                <input type="number" minlength="7" maxlength="10" name="Celular" id="campoCelular" placeholder="Número Celular...">
+            </div>
+            <div class="field_label">
+                <label for="fecha" class="etiqueta">Fecha de nacimiento</label>
+            </div>
+            <div class="field_input">
+                <input type="date" id="Campofecha" style="width: 172px;">
+            </div>
+            <div class="field_buttom">
+                <input type="radio" name="Genero" id="Masculino" checked>
+                <label for="Masculino">Masculino</label>
+                <input type="radio" name="Genero"id="Femenino">
+                <label for="Femenino">Femenino</label>
+            </div>
+           <div class="field_buttom">
+                <button class="boton" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
