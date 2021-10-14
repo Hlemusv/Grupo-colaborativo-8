@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let items = [];
 function recibirEdad() {
     let edad;
@@ -37,3 +38,12 @@ function ordenarEdad(edad) {
 module.exports.recibirEdad = recibirEdad;
 module.exports.ordenarEdad = ordenarEdad;
 module.exports.promedioEdad = promedioEdad;
+=======
+function recibirEdad(){
+    let edad;
+    edad = prompt("Digite su edad");
+    return edad;
+}
+
+module.exports.recibirEdad = recibirEdad;
+>>>>>>> d243bf902ea3a7cc031a0b8c6bf27a56d51cd082
