@@ -1,0 +1,1 @@
+select avg(edad) from usuarios;

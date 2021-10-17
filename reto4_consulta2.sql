@@ -1,0 +1,1 @@
+select count(*) from usuarios where edad > 18;
