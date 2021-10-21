@@ -19,18 +19,25 @@ function validar_nombre(nombre) {
 }
 
 function validar_contrasenas(contrasena1, contrasena2) {
-  if (contrasena1 == "" && contrasena2 == "") {
+  var espacios = false;
+  var cont = 0;
+
+  while (!espacios && cont < contrasena1.length) {
+    if (contrasena1.charAt(cont) == " ") espacios = true;
+    cont++;
+  }
+
+  if (espacios) {
+    return false;
+  }
+  if (contrasena1.length == 0 || contrasena2.length == 0) {
+    return false;
+  }
+
+  if (contrasena1 != contrasena2) {
     return false;
   } else {
-    if (contrasena1.length != contrasena2.length) {
-      return false;
-    } else {
-      if (contrasena1 == contrasena2) {
-        return true;
-      } else {
-        return false;
-      }
-    }
+    return true;
   }
 }
 
